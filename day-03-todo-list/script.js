@@ -1,14 +1,16 @@
 const themeToggle = document.getElementById("themeToggle");
 
-themeToggle.addEventListener("click", () => {
-  document.body.classList.toggle("dark");
+if (themeToggle) {
+  themeToggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
 
-  if (document.body.classList.contains("dark")) {
-    themeToggle.textContent = "☀️ Light Mode";
-  } else {
-    themeToggle.textContent = "🌙 Dark Mode";
-  }
-});
+    if (document.body.classList.contains("dark")) {
+      themeToggle.textContent = "☀️ Light Mode";
+    } else {
+      themeToggle.textContent = "🌙 Dark Mode";
+    }
+  });
+}
 
 const taskInput = document.getElementById("taskInput");
 const addBtn = document.getElementById("addBtn");
